@@ -59,6 +59,10 @@ def atv7():
 
 @meu_app.route('/atv8')
 def atv8():
+
+#    cosd=cosseno de delta e send= seno de delta / delta= o angulo de rotação
+#    x' = (x)*cosd-(y)*send
+#    y'=(x)*send+(y)*cosd
     
     return render_template('atv8.html')
 
