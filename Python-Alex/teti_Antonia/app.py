@@ -1,11 +1,14 @@
  #a partir do pacote flask import o Flask
 from flask import Flask, render_template
+from PIL import Image import requests
 meu_app = Flask(__name__)
 
 
 @meu_app.route('/home')
 def home():
-    return render_template('home.html')
+    im = Image.open(requests.get(url, stream=True).raw)
+    
+    return render_template('home.html', url)
 
 # @''.route indica a rota
 #def indica ao python o nome da função ou define coisas
