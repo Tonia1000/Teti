@@ -60,6 +60,13 @@ def atv7():
 @meu_app.route('/atv8')
 def atv8():
 
+    from PIL import Image
+    import requests
+    from io import BytesIO
+
+    response = requests.get(url)
+    img = Image.open(BytesIO(response.content))
+
 #    cosd=cosseno de delta e send= seno de delta / delta= o angulo de rotação
 #    x' = (x)*cosd-(y)*send
 #    y'=(x)*send+(y)*cosd
