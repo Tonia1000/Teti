@@ -1,14 +1,14 @@
  #a partir do pacote flask import o Flask
 from flask import Flask, render_template
-from PIL import Image import requests
+from PIL import Image, requests
 meu_app = Flask(__name__)
 
 
 @meu_app.route('/home')
 def home():
     im = Image.open(requests.get(url, stream=True).raw)
-    
-    return render_template('home.html', url)
+
+    return render_template('home.html')
 
 # @''.route indica a rota
 #def indica ao python o nome da função ou define coisas
@@ -62,13 +62,6 @@ def atv7():
 
 @meu_app.route('/atv8')
 def atv8():
-
-    from PIL import Image
-    import requests
-    from io import BytesIO
-
-    response = requests.get(url)
-    img = Image.open(BytesIO(response.content))
 
 #    cosd=cosseno de delta e send= seno de delta / delta= o angulo de rotação
 #    x' = (x)*cosd-(y)*send
