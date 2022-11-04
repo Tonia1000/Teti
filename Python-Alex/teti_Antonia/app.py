@@ -85,3 +85,8 @@ def blabla():
             return render_template('blabla.html', msn='success')
         return render_template('blabla.html', msn='fail')
     
+# ----------------------------------------------------------------
+@meu_app.route('/api-teti', methods=['POST','GET'])
+def api():
+    
+    return render_template('api.html')
