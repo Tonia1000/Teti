@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2> atv7 que rotaciona por um botão reindenizando pixel a pixel 90º </h2>
+        <script src="" async defer></script>
+    </body>
+</html>
+
+
+{% comment %} 
+    cosd=cosseno de delta e send= seno de delta / delta= o angulo de rotação
+    cos90=0 / sen90= 1
+
+    for x
+        for y
+            x' = (x)*cosd-(y)*send
+            y'=(x)*send+(y)*cosd 
+
+ --------------------------------------------------------------------------------------------------------------------
+
+    path = pathlib.Path('./'+str(f))
+
+    images = ['1.png','2.png','3.png'....]
+        
+    for image in images:
+
+        with open(str(f)+".html","w") as file:
+                
+            file.write('''<div class="card"><img src="'''+image+'''" alt=" "/>''')
+
+
+
+
+                with open(str(f)+".html","w") as file:
+                for image in images:
+                      file.write('''<div class="card"><img src="'''+image+'''" alt=" "/>''')
+
+ ------------------------------------------------------------------------------------------------------------------                       
+                        
+    from PIL import Image
+    import requests
+    from io import BytesIO
+
+    response = requests.get(url)
+    img = Image.open(BytesIO(response.content))
+
+
+{% endcomment %}
