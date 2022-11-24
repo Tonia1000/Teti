@@ -108,5 +108,22 @@ def user():
     return render_template('user.html')
 
 # ----------------------------------------------------------------
+@meu_app.route('/triangule', methods=['GET', 'POST'])
+def triangule():
+    
+    name = "Ze"
+    password = "123"
+    if(request.method=='GET'):
+        return render_template('user.html')        
+    if(request.method=='POST'):
+        name_for=request.form.get('name')
+        password_for=request.form.get('password')
+        if name_for=="Ze" and password_for=="123":
+            return render_template('user.html', msn='success')
+        return render_template('user.html', msn='fail')
+    
+    return render_template('user.html')
+
+# ----------------------------------------------------------------
 if __name__== "__main__":
     meu_app.run(debug=True)

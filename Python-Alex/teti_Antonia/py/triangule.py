@@ -1,12 +1,16 @@
+import math
 
-class Triangule
-
+class Triangule:
 #construtor
-
+    def __init__(self, a_lado, b_lado, c_lado):
+        self.a_lado = a_lado
+        self.b_lado = b_lado
+        self.c_lado = c_lado
+    
     def get_perimetro(self)-> int:
         return self.a_lado+self.b_lado+self.c_lado
 
-    def get_lado-maior(self)-> int:
+    def get_lado_maior(self)-> int:
         return max(self.a_lado, self.b_lado, self.c_lado)
 
     def get_area(self)-> float:
