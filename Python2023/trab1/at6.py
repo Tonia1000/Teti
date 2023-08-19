@@ -1,0 +1,1 @@
+# devia padrão     dp = raiz quadrada da variancia
